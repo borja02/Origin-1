@@ -19,6 +19,12 @@ var players = [
     { position: "3", alias: "mgutierrez", name: "Maria", surname: "Gutierrez", score: 850, created: "2020-11-03T15:20:21.377Z" }
 ];
 
+    var swaggerUi = require('swagger-ui-express'),
+    swaggerDocument = require('./swagger.json');
+
+    app.use('/api', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+    //app.use('/api/v1', router);
+
 function UpdateRanking() {
     //Order the ranking
     players.sort((a, b) => (a.score <= b.score) ? 1 : -1);

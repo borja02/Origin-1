@@ -1,0 +1,42 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Api Arnau Orts",
+        "description": ""
+    },
+    "schemes": [
+        "https"
+    ],
+    "host": "Api Arnau Orts",
+    "basePath": "/openapi101",
+    "paths": {
+        "/ranking": {
+            "get": {
+                "summary": "Show players ranking",
+                "description": "Returns a list of the player ranking.",
+                "responses": {
+                    "200": {
+                        "description": "Ranking",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "properties": {
+                                    "firstName": {
+                                        "type": "string"
+                                    },
+                                    "lastName": {
+                                        "type": "string"
+                                    },
+                                    "username": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
